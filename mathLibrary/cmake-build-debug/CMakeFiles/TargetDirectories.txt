@@ -1,0 +1,5 @@
+C:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/cmake-build-debug/CMakeFiles/mathLib.dir
+C:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/cmake-build-debug/CMakeFiles/run_tests.dir
+C:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.dir
