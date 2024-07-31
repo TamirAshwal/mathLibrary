@@ -3,6 +3,30 @@
 #include <stdlib.h>
 #include "../include/linearAlgebra.h"
 #include "../include/basicOperations.h"
+intMatrix forTest(int arr[], int i, int j){
+    intMatrix newMatrix;
+    newMatrix.rows = i;
+    newMatrix.cols = j;
+    // add check if the malloc worked
+    newMatrix.data = (int*) malloc(i * j * sizeof (int));
+    int size = newMatrix.rows * newMatrix.cols;
+    for(int index = 0; index < size; index++){
+        newMatrix.data[index] = arr[index];
+    }
+    return newMatrix;
+}
+doubleMatrix forTestDouble(double arr[], int i, int j){
+    doubleMatrix newMatrix;
+    newMatrix.rows = i;
+    newMatrix.cols = j;
+    // add check if the malloc worked
+    newMatrix.data = (double *) malloc(i * j * sizeof (double));
+    int size = newMatrix.rows * newMatrix.cols;
+    for(int index = 0; index < size; index++){
+        newMatrix.data[index] = arr[index];
+    }
+    return newMatrix;
+}
 intMatrix createIntMatrix(int i, int j){
     intMatrix newMatrix;
     newMatrix.rows = i;
@@ -48,21 +72,27 @@ int get_element(intMatrix m, int i, int j){
     return m.data[(i * m.rows) + j];
 }
 void printMatrix(void* m, MatrixType type){
+    int r;
+    int c;
 
-    int r = m->rows;
-    int c = m.cols;
-    if(type == INT_MATRIX) {
+    if(type == INT_MATRIX){
+        intMatrix* M = (intMatrix*) m;
+        r = M->rows;
+        c = M->cols;
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
-                printf("%d ", m.data[r * i + j]);
+                printf("%d ", M->data[r * i + j]);
             }
             printf("\n");
         }
     }
-    else if(type == DOUBLE_MATRIX){
+    else if(type == DOUBLE_MATRIX) {
+        doubleMatrix* M = (doubleMatrix *) m;
+        r = M->rows;
+        c = M->cols;
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
-                printf("%lf ", m.data[r * i + j]);
+                printf("%lf ", M->data[r * i + j]);
             }
             printf("\n");
         }
@@ -84,4 +114,22 @@ intMatrix matrixAddition(intMatrix m1, intMatrix m2){
     }
     return newMatrix;
 }
-intMatrix matrixScaling(intMatrix m, double x);
+doubleMatrix matrixScaling(doubleMatrix m, double x){
+    int size = m.rows * m.cols;
+    doubleMatrix newMatrix;
+    newMatrix.rows = m.rows;
+    newMatrix.cols = m.cols;
+    newMatrix.data = (double*) malloc(m.rows * m.cols * (sizeof(double)));
+    for(int i = 0 ; i < size; i++){
+        newMatrix.data[i] = m.data[i] * x;
+    }
+    return newMatrix;
+}
+int determinant(intMatrix m,int size){
+    if(size == 4){
+        return ((m.data[0] * m.data[3]) - (m.data[1] * m.data[2]));
+    }
+    if(size == 1){
+        return m.data[0];
+    }
+}

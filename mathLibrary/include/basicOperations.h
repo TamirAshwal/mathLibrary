@@ -10,4 +10,9 @@ double absoluteValue(double x);
 double square(double num);
 double power(double base, int exponent);
 double squareRoot(double num);
+double root(double radicand, double index);
+double anyPower(double base, double exponent);
+double roundCheck(double x);
+double eFunction(double x);
+double lnFunction(double x);
 #endif //MATHLIBRARY_BASICOPERATIONS_H
