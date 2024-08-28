@@ -26,3 +26,15 @@ double radianToDegrees(double r){
 double degreesToRadian(double d){
     return (d * (PI / 180));
 }
+double normalizeAngle(double angle, int lowerBound, int upperBound){
+    if(angle > lowerBound && angle < upperBound){
+        return angle;
+    }
+    while(angle < lowerBound) {
+        angle += upperBound;
+    }
+    while(angle > upperBound){
+        angle -= upperBound;
+    }
+    return angle;
+}

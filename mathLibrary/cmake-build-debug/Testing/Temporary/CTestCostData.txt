@@ -1,2 +1,2 @@
-MathLibraryTest 8 0.00498689
+MathLibraryTest 94 0.000850221
 ---

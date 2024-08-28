@@ -13,7 +13,7 @@ add_library(mathLib SHARED
         src/basicOperations.c
         src/linearAlgebra.c
         src/trigonometricFunctions.c
-        )
+        src/complexNumbers.c include/complexNumbers.h "src/geometry.c" "include/geometry.h")
 
 # Define the test executable
 add_executable(run_tests

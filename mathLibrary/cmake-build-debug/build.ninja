@@ -73,6 +73,22 @@ build CMakeFiles/mathLib.dir/src/trigonometricFunctions.c.obj: C_COMPILER__mathL
   OBJECT_DIR = CMakeFiles\mathLib.dir
   OBJECT_FILE_DIR = CMakeFiles\mathLib.dir\src
 
+build CMakeFiles/mathLib.dir/src/complexNumbers.c.obj: C_COMPILER__mathLib_Debug C$:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/src/complexNumbers.c || cmake_object_order_depends_target_mathLib
+  DEFINES = -DmathLib_EXPORTS
+  DEP_FILE = CMakeFiles\mathLib.dir\src\complexNumbers.c.obj.d
+  FLAGS = -g -std=gnu99
+  INCLUDES = -IC:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/include
+  OBJECT_DIR = CMakeFiles\mathLib.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathLib.dir\src
+
+build CMakeFiles/mathLib.dir/src/geometry.c.obj: C_COMPILER__mathLib_Debug C$:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/src/geometry.c || cmake_object_order_depends_target_mathLib
+  DEFINES = -DmathLib_EXPORTS
+  DEP_FILE = CMakeFiles\mathLib.dir\src\geometry.c.obj.d
+  FLAGS = -g -std=gnu99
+  INCLUDES = -IC:/Users/tamir/university/IntroductionToComputerScience/mathLibrary/include
+  OBJECT_DIR = CMakeFiles\mathLib.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathLib.dir\src
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target mathLib
@@ -81,7 +97,7 @@ build CMakeFiles/mathLib.dir/src/trigonometricFunctions.c.obj: C_COMPILER__mathL
 #############################################
 # Link the shared library libmathLib.dll
 
-build libmathLib.dll libmathLib.dll.a: C_SHARED_LIBRARY_LINKER__mathLib_Debug CMakeFiles/mathLib.dir/src/basicOperations.c.obj CMakeFiles/mathLib.dir/src/linearAlgebra.c.obj CMakeFiles/mathLib.dir/src/trigonometricFunctions.c.obj
+build libmathLib.dll libmathLib.dll.a: C_SHARED_LIBRARY_LINKER__mathLib_Debug CMakeFiles/mathLib.dir/src/basicOperations.c.obj CMakeFiles/mathLib.dir/src/linearAlgebra.c.obj CMakeFiles/mathLib.dir/src/trigonometricFunctions.c.obj CMakeFiles/mathLib.dir/src/complexNumbers.c.obj CMakeFiles/mathLib.dir/src/geometry.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\mathLib.dir
