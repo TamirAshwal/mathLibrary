@@ -5,6 +5,7 @@ A comprehensive mathematics library implemented in C, offering functions for cal
 - Calculus 
 - Linear algebra (matrix operations)
 - Geometry
+- probability
 This library is an ongoing project and is actively being developed. I plan to add more features and functionalities in the future, including:
 - Additional calculus operations
 - Advanced linear algebra functions
